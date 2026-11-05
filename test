@@ -1,0 +1,3 @@
+set -ex
+env
+systemd-run --user --scope --property=OOMScoreAdjust=500 --property=OOMPolicy=kill -- echo Hello

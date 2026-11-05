@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  ubuntu-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Test
+        run: ./test
+  ubuntu-26-arm:
+    runs-on: ubuntu-26.04-arm
+    steps:
+      - uses: actions/checkout@v7
+      - name: Test
+        run: ./test
